@@ -34,13 +34,14 @@
   }
   .musicbox .control .iconfont {
     margin-right:12px;
-    cursor:point;
+    cursor:pointer;
   }
-  .music .control {
-    margin-top:50px;
+  .musicbox .control {
+    margin-top:10px;
     font-size:22px;
     color:#ee8a8e;
-    float:left
+    float:left;
+    cursor: pointer;
   }
   .musicbox .info {
     margin-left:120px;
@@ -58,12 +59,17 @@
     height:3px;
     margin-top:5px;
     background-color:rgba(0,0,0,0.2);
-    cursor:point;
+    cursor:pointer;
+  }
+  .musicbox .progress-current {
+    height:4px;
+    background-color:rgba(240, 11, 87, 0.185);
   }
   .musicbox .progress .time {
     margin-left:220px;
   }
   ul>li{
     border:1px solid rgba(0,0,0,0.8);
-    cursor:point;
+    cursor:pointer;
+    list-style-type:none;
   }
