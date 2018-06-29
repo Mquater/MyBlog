@@ -9,7 +9,7 @@ function $(selector){
 getMusicList(function(list){
   musicList=list;
   loadMusic(list[currentIndex]);
-  generateList(list,currentIndex)=setInterval(function(){
+  updateList(list,currentIndex)=setInterval(function(){
     nextIndex=(currentIndex+1)%musicList.length;
     $('.list .current').innerText=(list[currentIndex]).title + '-' + (list[currentIndex]).author;
     $('.list .nextone').innerText=(list[nextIndex]).title + '-' + (list[nextIndex]).author;
@@ -31,6 +31,7 @@ function getMusicList(callback){
   };
   xhr.send();
 }
+//音乐进度条,歌曲信息更新
 function loadMusic(musicObj){
   $('.musicbox .title').innerText=musicObj.title;
   $('.musicbox .author').innerText=musicObj.author;
@@ -50,7 +51,7 @@ audio.onplay=function(){
 audio.onpause=function(){
   clearInterval(clock);
 };
-//暂停 播放
+//暂停 播放(图标切换未实现)
 $('.musicbox .play').onclick=function(){
   if(audio.paused){
     audio.play();
